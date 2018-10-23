@@ -32,7 +32,6 @@
 			</div>
 			<div class="busqueda">
 				<input type="text" name="" placeholder="¿Qué estas buscando?" id="buscar">
-				<div class="lupa"></div>
 			</div>
 			<ul>
 				<li><a href="#">Ingresar</a></li>
