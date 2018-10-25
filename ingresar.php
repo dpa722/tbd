@@ -17,7 +17,7 @@
         <label for="password">Contraseña</label>
         <input type="password" name="contra" placeholder="Contraseña"> 
         <input type="submit" value="LOGIN">
-        <a href="#">Olvidaste tu contraseña?</a>
+        <a href="registrarse.php">¿No tienes cuenta?</a>
       </form>
     </div>
     
