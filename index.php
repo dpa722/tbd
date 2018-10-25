@@ -1,144 +1,263 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
 	<meta charset="utf-8">
-	<title>Nombre Pagina de anuncios</title>
-	<link rel="stylesheet" type="text/css" href="css/header.css">
-	<link rel="stylesheet" type="text/css" href="css/noticias.css">
-	<link rel="stylesheet" type="text/css" href="css/categorias.css">
-	<link rel="stylesheet" type="text/css" href="css/footer.css">
-	<script type="text/javascript" src="jquery/jquery-3.1.1.min.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$("#particion").addClass('inicio');
-			$(window).on('scroll',function(){
-				if($(window).scrollTop()){
-					$("#particion").removeClass('inicio');
-					$('#particion').addClass('sube');
-				}else{
-					$('#particion').removeClass('sube');
-					$('#particion').addClass('inicio');
-				}
-			});
-		});
-		</script>
+	<!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>TBD</title>
+	
+	<link rel="stylesheet" type="text/css" href="css/bootstrap2.min.css">	
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="css/index/estilos.css">
+	<link rel="shortcut icon" type="image/x-icon" href="img/ico.ico">
+	
+	
+	
 </head>
-<body>
-	<!-- inicio de la cabecera -->
-	<header>
-		<div  id="particion">
-			<div class="nombre">
-				<a href="index.php" class="n">NOMBRE PAGINA</a>
-			</div>
-			<div class="busqueda">
-				<input type="text" name="" placeholder="¿Qué estas buscando?" id="buscar">
-				<div class="lupa"></div>
-			</div>
-			<ul>
-				<li><a href="#">Ingresar</a></li>
-				<li><a href="registroPagina.php">Registrarse</a></li>
-				<li><a href="ayuda.php">Ayuda</a></li>
-			</ul>
-		</div>
-		<input type="button" class="botonInicio" value="INICIAR">
-	</header>
-	<!-- fin de la Cabezera-->
-	<!-- inicio del cuerpo para las noticias -->
-	<section class="noticias">
-		<!-- article sera la etiqeuta para cada producto en venta -->
-		<h1>ULTIMAS NOVEDADES</h1>
-		<article class="articulo1">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</article>
-		<article class="articulo2">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</article>
-		<article class="articulo3">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</article>
-		<article class="articulo4">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</article>
-		<article class="articulo5">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</article>
-		<article class="articulo6">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</article>
-		
-
-	</section>
-	<!-- fin del cuerpo para las Noticias-->
-
-	<!-- inicio parte de las categorias y subcategorias -->
-	<section class="categorias">
-		<p> Encuentra lo que buscas en nuestras categorías</p>
-		<div class="cat1">
-			<ul class="categoriaLista">
-				<li class="nombreLista"><a href="#">COMPRA_VENTA</a></li>
-				<li class="subcat"><a href="#">Ropa - Accesorios </a></li>
-				<li class="subcat"><a href="#">Moviles</a></li>
-				<li class="subcat"><a href="#"> electronica</a></li>
-				<li class="subcat"><a href="#"> hogar y jardin</a></li>
-				<li class="subcat"><a href="#"> otras ventas</a></li>
-				<li class="subcat"><a href="#"> ordenadores</a></li>
-				<li class="subcat"><a href="#"> Video Juegos - Consolas</a></li>
-				<li class="subcat"><a href="#"> Comercio - Industria</a></li>
-				<li class="subcat"><a href="#"> Salud y belleza</a></li>
-				<li class="subcat"><a href="#"> Articulos para niños y bebes</a></li>
-				<li class="subcat"><a href="#"> instrumentos musicales</a></li>
-				<li class="subcat"><a href="#"> Articulos deportivos - bicicletas</a></li>
-				<li class="subcat"><a href="#"> joyas - relojes</a></li>
-				<li class="subcat"><a href="#"> Animales</a></li>
-				<li class="subcat"><a href="#"> Fotografia -Imagen -sonido</a></li>
-				<li class="subcat"><a href="#">libros - revistas</a></li>
-				<li class="subcat"><a href="#">juegos </a></li>
-				<li class="subcat"><a href="#">coleccionables - antiguedades </a></li>
-				<li class="subcat"><a href="#">SEgunda mano </a></li>
-				<li class="subcat"><a href="#">tickets y entradas	</a></li>
+<body>	
 
 
-			</ul>
-		</div>
-	</section>
-	<!-- fin de Categorias y subcategorias-->
-	<!-- inicio del pie de pagina -->
-	<footer class="pie">
-		<center>
-			<a href="#" class="pieNombre">NOMBRE PAGINA</a>
-		</center>
+<header>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+		<a class="navbar-brand" href="index.php">
+			<img src="img/lupa.png">
+			<a class="nav-link" href="#">TBD <span class="sr-only">(current)</span></a>
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarColor01">
 			
-	</footer>
-	<!--fin del pie de pagina-->
+			<form class="form-inline my-2 my-lg-0">
+				<input class="form-control mr-sm-2" type="text" placeholder="¿Que estas buscando?">
+				<button class="btn btn-secondary my-2 my-sm-0" type="submit">Buscar</button>
+			</form>
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item"><a class="nav-link" href="Registrarse.html">Ingresar</a></li>
+				<li class="nav-item"><a class="nav-link" href="#">Registrarse</a></li>
+				<li class="nav-item"><a class="nav-link" href="#">Ayuda</a></li>
+			</ul>
+		</div>
+	</nav>
+</header>
+
+	
+
+
+
+
+	<section class="container-fluid">
+		<div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+			<button type="button" class="btn btn-info">COMPRA-VENTA</button>
+			<div class="btn-group" role="group">
+				<button id="btnGroupDrop3" type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+				<div class="dropdown-menu" aria-labelledby="btnGroupDrop3">
+					<a class="dropdown-item" href="#">Cualquier Producto</a>
+					<a class="dropdown-item" href="#">Cualquier cosa 2</a>
+				</div>
+			</div>
+		</div>
+		<div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+			<button type="button" class="btn btn-info">CLASES</button>
+			<div class="btn-group" role="group">
+				<button id="btnGroupDrop3" type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+				<div class="dropdown-menu" aria-labelledby="btnGroupDrop3">
+					<a class="dropdown-item" href="#">Dropdown link</a>
+					<a class="dropdown-item" href="#">Dropdown link</a>
+				</div>
+			</div>
+		</div>
+		<button type="button" class="btn btn-outline-info btn-lg">VIVIENDAS LOCALES</button>
+		<button type="button" class="btn btn-outline-info btn-lg">TRABAJO</button>
+		<button type="button" class="btn btn-outline-info btn-lg">MOTOR</button>
+		<button type="button" class="btn btn-outline-info btn-lg">SERVICIOS</button>
+	</section>
+
+
+	<section class="flex-container">
+		<div class="container">
+		<div class="col-md-8" align="center">
+			<button type="button" class="btn btn-warning btn-lg btn-block">Nuevos Productos</button>
+		</div>
+		</div>
+	</section>
+
+	<section class="seccionArticulo">
+		<div class="container">
+			<div class="row">
+				<div class="card border-info mb-3" style="max-width: 20rem;">
+					<div class="card-header">Mercancia</div>
+					<div class="card-body">
+						<img src="img/lupa.png">
+						<p class="card-text">Breve descripcion del articulo con el cual se esta comercializando</p>
+						<button type="button" class="btn btn-danger" >Ver Producto</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="seccionArticulo">
+		<div class="container">
+			<div class="row">
+				<div class="card border-info mb-3" style="max-width: 20rem;">
+					<div class="card-header">Mercancia</div>
+					<div class="card-body">
+						<img src="img/lupa.png">
+						<p class="card-text">Breve descripcion del articulo con el cual se esta comercializando</p>
+						<button type="button" class="btn btn-danger" href="producto.html">Ver Producto</button>
+						<a href="producto.html" target="_blank">link</a> 
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="seccionArticulo">
+		<div class="container">
+			<div class="row">
+				<div class="card border-info mb-3" style="max-width: 20rem;">
+					<div class="card-header">Mercancia</div>
+					<div class="card-body">
+						<img src="img/lupa.png">
+						<p class="card-text">Breve descripcion del articulo con el cual se esta comercializando</p>
+						<button type="button" class="btn btn-danger">Ver Producto</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="seccionArticulo">
+		<div class="container">
+			<div class="row">
+				<div class="card border-info mb-3" style="max-width: 20rem;">
+					<div class="card-header">Mercancia</div>
+					<div class="card-body">
+						<img src="img/lupa.png">
+						<p class="card-text">Breve descripcion del articulo con el cual se esta comercializando</p>
+						<button type="button" class="btn btn-danger">Ver Producto</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="seccionArticulo">
+		<div class="container">
+			<div class="row">
+				<div class="card border-info mb-3" style="max-width: 20rem;">
+					<div class="card-header">Mercancia</div>
+					<div class="card-body">
+						<img src="img/lupa.png">
+						<p class="card-text">Breve descripcion del articulo con el cual se esta comercializando</p>
+						<button type="button" class="btn btn-danger">Ver Producto</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="seccionArticulo">
+		<div class="container">
+			<div class="row">
+				<div class="card border-info mb-3" style="max-width: 20rem;">
+					<div class="card-header">Mercancia</div>
+					<div class="card-body">
+						<img src="img/lupa.png">
+						<p class="card-text">Breve descripcion del articulo con el cual se esta comercializando</p>
+						<button type="button" class="btn btn-danger">Ver Producto</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="seccionArticulo">
+		<div class="container">
+			<div class="row">
+				<div class="card border-info mb-3" style="max-width: 20rem;">
+					<div class="card-header">Mercancia</div>
+					<div class="card-body">
+						<img src="img/lupa.png">
+						<p class="card-text">Breve descripcion del articulo con el cual se esta comercializando</p>
+						<button type="button" class="btn btn-danger">Ver Producto</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="seccionArticulo">
+		<div class="container">
+			<div class="row">
+				<div class="card border-info mb-3" style="max-width: 20rem;">
+					<div class="card-header">Mercancia</div>
+					<div class="card-body">
+						<img src="img/lupa.png">
+						<p class="card-text">Breve descripcion del articulo con el cual se esta comercializando</p>
+						<button type="button" class="btn btn-danger">Ver Producto</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 col-xs-6">
+					<div class="footer">
+						<h3 class="footer-title">Informacion</h3>
+						<ul class="footer-links">
+							<li><a href="#">¿Quienes Somos?</a></li>
+							<li><a href="#">Contacto y ayuda</a></li>
+							<li><a href="#">Seguridad</a></li>
+							<li><a href="#">Terminos & Condiciones</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="clearfix visible-xs"></div>
+				<div class="col-md-3 col-xs-6">
+					<div class="footer">
+						<h3 class="footer-title">Servicios</h3>
+						<ul class="footer-links">
+							<li><a href="#">Prinera Publicacion</a></li>
+							<li><a href="#">Organizacion</a></li>
+							<li><a href="#">Ordenes</a></li>
+							<li><a href="#">Anuncios Importantes</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-3 col-xs-6">
+					<div class="footer">
+						<h3 class="footer-title">Acerca de nosotros</h3>
+						<ul class="footer-links">
+							<li href="#">Contactate con Nosotros</li>
+							<li><a href="#">Correo Electronico</a></li>
+							<li><a href="#"># Celular</a></li>
+							<li><a href="#">Direccion</a></li>
+
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<span class="copyright">
+						Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Estudiantes de Ing. de Sistemas de la Universidad Mayor de San Simon.
+					</span>
+				</div>
+			</div>
+		</div>
+	</footer
+
+	
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 </body>
 </html>
