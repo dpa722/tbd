@@ -2,14 +2,14 @@
 <html lang="es">
 <head>
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<title>TBD</title>
 	
 	<link rel="stylesheet" type="text/css" href="css/bootstrap2.min.css">	
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
-	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<link rel="stylesheet" type="text/css" href="css/index/estilos.css">
 	<link rel="shortcut icon" type="image/x-icon" href="img/ico.ico">
 	
 	
@@ -17,47 +17,41 @@
 </head>
 <body>	
 
-	<header class="indexHeader">
-		<div class="row">
-			<nav class="navbar navbar-expand-lg navbar-dark bg-primary container">
-			<a class="nav-link" href="#">TBD <span class="sr-only">(current)</span></a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
 
-				<div class="collapse navbar-collapse" id="navbarColor01">
-					<form class="form-inline my-2 my-lg-0">
-						<input class="form-control mr-sm-2" type="text" placeholder="¿Que estas Buscando?">
-						<button class="btn btn-secondary my-2 my-sm-0" type="submit">Buscar</button>
-					</form>
-					<ul class="navbar-nav mr-auto">
+	
 
-						<li class="nav-item">
-							<a class="nav-link" href="#">Ingresar</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Registrarse</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Ayuda</a>
-						</li>
-					</ul>
+
+
+
+	<section class="container-fluid">
+		<div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+			<button type="button" class="btn btn-info">COMPRA-VENTA</button>
+			<div class="btn-group" role="group">
+				<button id="btnGroupDrop3" type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+				<div class="dropdown-menu" aria-labelledby="btnGroupDrop3">
+					<a class="dropdown-item" href="#">Dropdown link</a>
+					<a class="dropdown-item" href="#">Dropdown link</a>
 				</div>
-			</nav>
-			<input type="button" class="botonInicio" value="INICIAR">
-		</header>
-
-	<nav class="navegacion">
-		<button type="button" class="btn btn-outline-info btn-lg">COMPRA-VENTA</button>
-		<button type="button" class="btn btn-outline-info btn-lg">CLASES</button>
+			</div>
+		</div>
+		<div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+			<button type="button" class="btn btn-info">CLASES</button>
+			<div class="btn-group" role="group">
+				<button id="btnGroupDrop3" type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+				<div class="dropdown-menu" aria-labelledby="btnGroupDrop3">
+					<a class="dropdown-item" href="#">Dropdown link</a>
+					<a class="dropdown-item" href="#">Dropdown link</a>
+				</div>
+			</div>
+		</div>
 		<button type="button" class="btn btn-outline-info btn-lg">VIVIENDAS LOCALES</button>
 		<button type="button" class="btn btn-outline-info btn-lg">TRABAJO</button>
 		<button type="button" class="btn btn-outline-info btn-lg">MOTOR</button>
 		<button type="button" class="btn btn-outline-info btn-lg">SERVICIOS</button>
-		<button type="button" class="btn btn-outline-info btn-lg">COMUNIDAD</button>
-	</nav>
+	</section>
 
-	<section >
+
+	<section class="flex-container">
 		<div class="container">
 		<div class="col-md-8" align="center">
 			<button type="button" class="btn btn-warning btn-lg btn-block">Nuevos Productos</button>
@@ -235,7 +229,9 @@
 				</div>
 			</div>
 		</div>
-	</footer>
+	</footer
+
+	
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 </body>
