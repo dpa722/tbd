@@ -11,7 +11,7 @@
     <div class="login-box">
       <img src="img/logoRegistro.png" class="avatar" alt="Avatar Image">
       <h1>Iniciar Cesion</h1>
-      <form action="extenciones/crearCuenta/acceder.php" method="POST"> 
+      <form action="extenciones/accederCuenta/acceder.php" method="POST"> 
         <label for="username">Correo Electronico</label>
         <input type="text" name="usuario" placeholder="Correo Electronico" required="">   
         <label for="password">Contraseña</label>

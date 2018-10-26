@@ -2,13 +2,13 @@
 	include("conexion.php");
 
 	$email = $_POST['email'];
-	$contra = $_POST['password'];
+	$contra = $_POST['contra'];
 	$ci = $_POST['ci'];
-	$nombre = $_POST['name'];
-	$paterno = $_POST['last name'];
-	$materno = $_POST['last name2'];
-	$pais = $_POST['country'];
-	$dpto = $_POST['address'];
+	$nombre = $_POST['nombre'];
+	$paterno = $_POST['ap'];
+	$materno = $_POST['am'];
+	$pais = $_POST['pais'];
+	$dpto = $_POST['dpto'];
 //primero verificamos qeu este bien el correo y qeu no sea igual a otro existente 
 	$queryVerificar = "SELECT * FROM cuenta WHERE email = '$email' ";
 	$resultadoVerificacion = $conexion -> query($queryVerificar);

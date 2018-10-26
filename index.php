@@ -35,8 +35,8 @@
 				<button class="btn btn-secondary my-2 my-sm-0" type="submit">Buscar</button>
 			</form>
 			<ul class="navbar-nav mr-auto">
-				<li class="nav-item"><a class="nav-link" href="registrarse.php">Ingresar</a></li>
-				<li class="nav-item"><a class="nav-link" href="ingresar.php">Registrarse</a></li>
+				<li class="nav-item"><a class="nav-link" href="ingresar.php">Ingresar</a></li>
+				<li class="nav-item"><a class="nav-link" href=" registrarse.php">Registrarse</a></li>
 				<li class="nav-item"><a class="nav-link" href="#">Ayuda</a></li>
 			</ul>
 		</div>

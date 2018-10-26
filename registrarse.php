@@ -16,14 +16,14 @@
 		<form class="formulario" action="extenciones/crearCuenta/operacionGuardar.php" method="POST">
 			<h1>Felicidades !!</h1>
 			<h1>Nuevo Usuario</h1>
-			<input type="text" name="email" class="Email" placeholder="Correo Electronico">
-			<input type="password" name="password" class="Address" placeholder="Contraseña">
-			<input type="text" name="ci" class="CI" placeholder="Carnet de Identidad">
-			<input type="text" name="name" class="Name" placeholder="Nombre">
-			<input type="text" name="last name" class="Name" placeholder="Apellido Paterno">
-			<input type="text" name="last name2" class="Name" placeholder="Apellido Materno">
-			<input type="text" name="country" class="Country" placeholder="Pais">
-			<input type="text" name="address" class="Address" placeholder="Departamento">
+			<input type="text" name="email" class="Email" placeholder="Correo Electronico" required="">
+			<input type="password" name="contra" class="Address" placeholder="Contraseña" required="">
+			<input type="text" name="ci" class="CI" placeholder="Carnet de Identidad" required="">
+			<input type="text" name="nombre" class="Name" placeholder="Nombre" required="">
+			<input type="text" name="ap" class="Paterno" placeholder="Apellido Paterno" required="">
+			<input type="text" name="am" class="Materno" placeholder="Apellido Materno" required="">
+			<input type="text" name="pais" class="Country" placeholder="Pais" required="">
+			<input type="text" name="dpto" class="Address" placeholder="Departamento" required="">
 			<button type="submit" value="Add" name="submit">Registrarse</button>
 		</form>
 	</div>
