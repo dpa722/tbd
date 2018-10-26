@@ -1,12 +1,14 @@
+<?php include('PHP/funciones.php') ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Nombre Pagina de anuncios</title>
+	<title>Avisos clasificados gratis</title>
 	<link rel="stylesheet" type="text/css" href="css/header.css">
 	<link rel="stylesheet" type="text/css" href="css/noticias.css">
 	<link rel="stylesheet" type="text/css" href="css/categorias.css">
 	<link rel="stylesheet" type="text/css" href="css/footer.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<script type="text/javascript" src="jquery/jquery-3.1.1.min.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
@@ -44,65 +46,30 @@
 	</header>
 	<!-- fin de la Cabezera-->
 	<!-- inicio del cuerpo para las noticias -->
-	<section class="noticias">
+	<div class="noticias">
 		<!-- article sera la etiqeuta para cada producto en venta -->
 		<h1>ULTIMAS NOVEDADES</h1>
-		<article class="articulo1">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</article>
-		<article class="articulo2">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</article>
-		<article class="articulo3">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</article>
-		<article class="articulo4">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</article>
-		<article class="articulo5">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</article>
-		<article class="articulo6">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</article>
+		<div class="row">
+            <?php  
+            //foreach ($ofertas as $oferta_id =>$oferta) {
+            //	echo portada($oferta_id, $oferta);
+            //} 
+            $x=1;
+            $ofertas;
+            while( $x<=4 AND list($oferta_id, $oferta) = each($ofertas)){
+            	echo portada($oferta_id, $oferta);
+            	$x++;
+            }?>
+          <hr>
+        </div>
 		
 
-	</section>
+	</div>
 	<!-- fin del cuerpo para las Noticias-->
 
 	<!-- inicio parte de las categorias y subcategorias -->
-	<section class="categorias">
-		<p> Encuentra lo que buscas en nuestras categorías</p>
+	<div class="categorias">
+		<h1> Encuentra lo que buscas en nuestras categorías</h1>
 		<div class="cat1">
 			<ul class="categoriaLista">
 				<li class="nombreLista"><a href="#">COMPRA_VENTA</a></li>
@@ -130,7 +97,7 @@
 
 			</ul>
 		</div>
-	</section>
+	</div>
 	<!-- fin de Categorias y subcategorias-->
 	<!-- inicio del pie de pagina -->
 	<footer class="pie">
