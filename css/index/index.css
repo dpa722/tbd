@@ -1,0 +1,18 @@
+.nombre{
+	font-weight: bold;
+	font-size: 24px;
+
+}
+.listaAcor{
+	list-style: none;
+}
+.inicio{
+	box-shadow: 2px 2px 5px #000;
+	background: #ecf0f1;
+}
+.subir{
+	background: #c8d6e5;
+}
+#plata,#normal{
+	background: #ecf0f1;
+}
