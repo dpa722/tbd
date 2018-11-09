@@ -4,7 +4,7 @@
 	<title>Administrador</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<link rel="stylesheet" href="../../css/usuarios/usuarios.css">
+	<link rel="stylesheet" href="../../css/administrador/usuarios.css">
 </head>
 <body>
 
@@ -24,13 +24,13 @@
 				</figure>
 				<ul class="full-box list-unstyled text-center">
 					<li>
-						<a href="#">
-							<i class="zmdi zmdi-settings"></i>
+						<a href="configuracion_usuario.php">
+							<i class="glyphicon glyphicon-cog"></i>
 						</a>
 					</li>
 					<li>
-						<a href="#" class="btn-exit-system">
-							<i class="zmdi zmdi-power"></i>
+						<a class="btn-exit-system">
+							<i class="glyphicon glyphicon-off"></i>
 						</a>
 					</li>
 				</ul>
@@ -38,50 +38,85 @@
 			<!--Menu -->
 			<ul class="list-unstyled full-box dashboard-sideBar-Menu">
 				<li>
-					<a href="index.php">
-						<i class="zmdi zmdi-view-dashboard zmdi-hc-fw"></i> Pagina del Usuario
+					<a href="../../index2.php">
+						<i class="glyphicon glyphicon-th"></i> Pagina del Usuario
 					</a>
 				</li>
 				<li>
 					<a href="#" class="btn-sideBar-SubMenu">
-						<i class="glyphicon glyphicon-align-left"></i> Publicaciones <i></i>
+						<i class="glyphicon glyphicon-menu-right"></i> Publicaciones <i></i>
 					</a>
 					<ul class="list-unstyled full-box">
 						<li>
-							<a href="#"><i class=""></i> Tus publicaciones</a>
+							<a href="#"><i class="glyphicon glyphicon-resize-small"></i> Tus publicaciones</a>
+							<li>
+							<a href="#"><i class="glyphicon glyphicon-resize-full"></i> Publicar anuncio</a>
+						</li>
 						</li>
 					</ul>
 				</li>
 				<li>
 					<a href="#" class="btn-sideBar-SubMenu">
-						<i class="glyphicon glyphicon-align-left"></i> Perfil <i></i>
+						<i class="glyphicon glyphicon-menu-right"></i> Perfil <i></i>
 					</a>
 					<ul class="list-unstyled full-box">
 						<li>
-							<a href="#"><i class=""></i> Datos de Usuario</a>
+							<a href="#"><i class="glyphicon glyphicon-option-vertical"></i> Datos de Usuario</a>
 						</li>
 					</ul>
 				</li>
 				<li>
 					<a href="#" class="btn-sideBar-SubMenu">
-						<i class=""></i> Publicaciones Pago <i class="zmdi zmdi-caret-down pull-right"></i>
+						<i class="glyphicon glyphicon-menu-right"></i> Publicaciones Pago 
 					</a>
 					<ul class="list-unstyled full-box">
 						<li>
-							<a href="#"><i class=""></i> Pagas por publicaciones</a>
+							<a href="#"><i class="glyphicon glyphicon-phone"></i> Pagas por publicaciones</a>
+						</li>
+						<li>
+							<a href="#"><i class="glyphicon glyphicon-star"></i> Publicaciones con Pago</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#" class="btn-sideBar-SubMenu">
+						<i class="glyphicon glyphicon-menu-right"></i> Mensajes <i></i>
+					</a>
+					<ul class="list-unstyled full-box">
+						<li>
+							<a href="#"><i class="glyphicon glyphicon-open-file"></i> Nuevo Mensaje</a>
+						</li>
+						<li>
+							<a href="#"><i class="glyphicon glyphicon-paste"></i> Mensajes Enviados</a>
+						<li>
+							<a href="#"><i class="glyphicon glyphicon-copy"></i> Mensajes Recividos</a>
+						</li>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#" class="btn-sideBar-SubMenu">
+						<i class="glyphicon glyphicon-menu-right"></i> Favoritos <i></i>
+					</a>
+					<ul class="list-unstyled full-box">
+						<li>
+							<a href="#"><i class="glyphicon glyphicon-glass"></i> Tus publicaciones</a>
+						<li>
+							<a href="#"><i class="glyphicon glyphicon-cutlery"></i> Tus Favoritos</a>
+						</li>
 						</li>
 					</ul>
 				</li>
 				<li>
 					<a href="#!" class="btn-sideBar-SubMenu">
-						<i class=""></i> Ayuda <i class="zmdi zmdi-caret-down pull-right"></i>
+						<i class="glyphicon glyphicon-menu-right"></i> Ayuda 
 					</a>
 					<ul class="list-unstyled full-box">
 						<li>
-							<a href="#"><i class=""></i> ¿Contacto del administrador?</a>
+							<a href="#"><i class="glyphicon glyphicon-align-center"></i> Terminos y condiciones</a>
 						</li>
 						<li>
-							<a href="#"><i class=""></i> ¿Contacto del Programador?</a>
+							<a href="#"><i class="glyphicon glyphicon-hand-down"></i> ¿Contactos?</a>
 						</li>
 					</ul>
 				</li>
@@ -95,12 +130,12 @@
 		<nav class="full-box dashboard-Navbar">
 			<ul class="full-box list-unstyled text-right">
 				<li class="pull-left">
-					<a href="#!" class="btn-menu-dashboard"><i class="zmdi zmdi-more-vert"></i></a>
+					<a href="#!" class="btn-menu-dashboard"><i class="glyphicon glyphicon-list"></i></a>
 				</li>
 				<li>
 					<a href="#!" class="btn-Notifications-area">
-						<i class="zmdi zmdi-notifications-none"></i>
-						<span class="badge">  </span>
+						<i class="glyphicon glyphicon-comment"></i>
+						<span class="badge"><!-- numero de otificaciones --></span>
 					</a>
 				</li>
 			</ul>
@@ -108,46 +143,13 @@
 		<!-- contenido de la pagina //falta aumentar en esta parte -->
 		<div class="container-fluid">
 			<div class="page-header">
-			  <h1 class="text-titles">Control de la Pagina</h1>
+			  <h1 class="text-titles">USUARIO</h1>
 			</div>
 		</div>
 		<div class="full-box text-center" style="padding: 30px 10px;">
-			<article class="full-box tile">
-				<div class="full-box tile-title text-center text-titles text-uppercase">
-					Administradores
-				</div>
-				<div class="full-box tile-icon text-center">
-					<i class="zmdi zmdi-account"></i>
-				</div>
-				<div class="full-box tile-number text-titles">
-					<p class="full-box">0</p>
-					<small>Registrados</small>
-				</div>
-			</article>
-			<article class="full-box tile">
-				<div class="full-box tile-title text-center text-titles text-uppercase">
-					Usuarios
-				</div>
-				<div class="full-box tile-icon text-center">
-					<i class="zmdi zmdi-male-alt"></i>
-				</div>
-				<div class="full-box tile-number text-titles">
-					<p class="full-box">0</p>
-					<small>Registrados</small>
-				</div>
-			</article>
-			<article class="full-box tile">
-				<div class="full-box tile-title text-center text-titles text-uppercase">
-					Publicaciones
-				</div>
-				<div class="full-box tile-icon text-center">
-					<i class="zmdi zmdi-male-alt"></i>
-				</div>
-				<div class="full-box tile-number text-titles">
-					<p class="full-box">0</p>
-					<small>Registrados</small>
-				</div>
-			</article>
+			
+		<!-- contenido de la pagina //falta aumentar en esta parte    publicaciones del usuario -->
+
 		</div>
 	</section>
 

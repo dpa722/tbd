@@ -8,7 +8,12 @@
 </head>
 <body>
 
-	<!-- Side -->
+	<!-- Side                                                 principal de administrador diferenciar
+
+
+
+
+				-->
 	<section class="full-box cover dashboard-sideBar ">
 		<div class="full-box dashboard-sideBar-bg btn-menu-dashboard "></div>
 		<div class="full-box dashboard-sideBar-ct ">
@@ -19,7 +24,7 @@
 			<!-- Informacion -->
 			<div class="full-box dashboard-sideBar-UserInfo ">
 				<figure class="full-box">
-					<img src="" >
+					<img src="fotoadmin.php" >
 					<figcaption class="text-center text-titles">Nombre del Usuario</figcaption>
 				</figure>
 				<ul class="full-box list-unstyled text-center">
@@ -43,7 +48,7 @@
 					</a>
 					<ul class="list-unstyled full-box">
 						<li>
-							<a href="#"><i class="glyphicon glyphicon-cog"></i> Configuraciones</a>
+							<a href="administrador.php"><i class="glyphicon glyphicon-cog"></i> Configuraciones</a>
 						</li>
 					</ul>
 				</li>
@@ -110,12 +115,12 @@
 			</div>
 		</div>
 		<div class="full-box text-center" style="padding: 30px 10px;">
-			<article class="full-box tile">
-				<div class="full-box tile-title text-center text-titles text-uppercase">
-					Administradores
+			<article class="full-box tile" src='administradores.php'>
+				<div class="full-box tile-title text-center text-titles text-uppercase" >
+					<a href="administradores.php">ADMINISTRADORES</a>
 				</div>
 				<div class="full-box tile-icon text-center">
-					<i class="glyphicon glyphicon-king"></i>
+					<i class="glyphicon glyphicon-king" ></i>
 				</div>
 				<div class="full-box tile-number text-titles">
 					<p class="full-box">0</p>
@@ -123,8 +128,8 @@
 				</div>
 			</article>
 			<article class="full-box tile">
-				<div class="full-box tile-title text-center text-titles text-uppercase">
-					Usuarios
+				<div class="full-box tile-title text-center text-titles text-uppercase" >
+					<a class="btn btn-warning btn-lg" href="../usuario/usuario.php">USUARIOS</a>
 				</div>
 				<div class="full-box tile-icon text-center">
 					<i class="glyphicon glyphicon-user"></i>

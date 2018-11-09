@@ -7,6 +7,9 @@
 	<link rel="stylesheet" href="../../css/administrador/usuarios.css">
 </head>
 <body>
+	<?php 
+		include("consultas_administradores.php");
+	 ?>
 
 	<!-- Side -->
 	<section class="full-box cover dashboard-sideBar ">
@@ -43,7 +46,7 @@
 					</a>
 					<ul class="list-unstyled full-box">
 						<li>
-							<a href="#"><i class="glyphicon glyphicon-cog"></i> Configuraciones</a>
+							<a href="administrador.php"><i class="glyphicon glyphicon-cog"></i> Configuraciones</a>
 						</li>
 					</ul>
 				</li>
@@ -106,14 +109,14 @@
 		<!-- contenido de la pagina //falta aumentar en esta parte -->
 		<div class="container-fluid">
 			<div class="page-header">
-			  <h1 class="text-titles">ADMINISTRADORES</h1>
+				<h1 class="text-titles">ADMINISTRADORES</h1>
 			</div>
 		</div>
 
 
 		<section>
 			<button type="button" class="btn btn-default btn-lg" onclick="location.href='nuevo_administrador.php' ">
- 	 			 <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Nuevo Administrador
+				<span class="glyphicon glyphicon-star" aria-hidden="true"></span> Nuevo Administrador
 			</button>
 		</section>
 
@@ -121,27 +124,27 @@
 
 
 		<section>
-			<!-- Form validations -->
-        <div class="row">
-          <div class="col-lg-12">
-            <section class="panel">
-              <header class="panel-heading">
-                Lista de Administradores
-              </header>
-              <div class="panel-body">
-                <div class="form">
-                  <form class="form-validate form-horizontal" id="feedback_form" method="get" action="">
-                    
-                  <!-- Agarrar de la base de datos para colocar una lista de los usuarios -->
-
-                  </form>
-                </div>
-              </div>
+			<!-- recuperacion de administradores -->
+			<div class="row">
+				<div class="col-lg-12">
+					<section class="panel">
+						<header class="panel-heading">
+							Lista de Administradores
+						</header>
+						<div class="panel-body">
+							<div class="form">
+								<form class="form-validate form-horizontal" id="feedback_form" method="get" action="">
+								
+								<?php  
+									lista_administradores();
+								?>
+								</form>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
 		</section>
-
-
-
-
 	</section>
 
 	<!-- Notificaciones -->

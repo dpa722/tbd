@@ -7,7 +7,6 @@
 	<link rel="stylesheet" href="../../css/administrador/usuarios.css">
 </head>
 <body>
-
 	<!-- Side -->
 	<section class="full-box cover dashboard-sideBar ">
 		<div class="full-box dashboard-sideBar-bg btn-menu-dashboard "></div>
@@ -19,7 +18,7 @@
 			<!-- Informacion -->
 			<div class="full-box dashboard-sideBar-UserInfo ">
 				<figure class="full-box">
-					<img src="" >
+					<img src="colocarFoto()" >
 					<figcaption class="text-center text-titles">Nombre del Usuario</figcaption>
 				</figure>
 				<ul class="full-box list-unstyled text-center">
@@ -126,41 +125,46 @@
               </header>
               <div class="panel-body">
                 <div class="form">
-                  <form class="form-validate form-horizontal">
-
+                  <form class="form-validate form-horizontal" action="datos.php" method="POST" enctype="multipart/form-data">
+                  	<div>
+                      <label class="control-label col-lg-2">foto de Perfil</label><div class="col-lg-10">
+                        <input  type="file" REQUERED name="foto" />
+                      </div>
+                    </div><br><br>
                     <div class="form-group ">
                       <label class="control-label col-lg-2">Nombre</label><div class="col-lg-10">
-                        <input class="form-control"  name="nombre"  type="text">
+                        <input class="form-control" REQUIRED name="nombre"  type="text" placeholder="Nombre Completo">
                       </div>
                     </div>
                     <div class="form-group ">
                       <label class="control-label col-lg-2">Apellido Peterno</label><div class="col-lg-10">
-                        <input class="form-control" name="apPaterno" type="text"/>
+                        <input class="form-control" REQUIRED name="apPaterno" type="text"/>
                       </div>
                     </div>
                     <div class="form-group ">
                       <label class="control-label col-lg-2">Apellido Materno</label><div class="col-lg-10">
-                        <input class="form-control" name="apMaterno" type="text"/>
+                        <input class="form-control" REQUIRED name="apMaterno" type="text"/>
                       </div>
                     </div>
                     <div class="form-group ">
                       <label class="control-label col-lg-2">CI</label><div class="col-lg-10">
-                        <input class="form-control" name="ci" type="text"/>
+                        <input class="form-control" REQUIRED name="ci" type="text"/>
                       </div>
                     </div>
                     <div class="form-group ">
                       <label class="control-label col-lg-2">Correo</label><div class="col-lg-10">
-                        <input class="form-control" name="correo" type="text"/>
+                        <input class="form-control" REQUIRED name="correo" type="text"/>
                       </div>
                     </div>
                     <div class="form-group ">
                       <label for="password" class="control-label col-lg-2">Contraseña</label><div class="col-lg-10">
-                        <input class="form-control" name="contra" type="password" />
+                        <input class="form-control" REQUIRED name="contra" type="password" />
                       </div>
                     </div>
+                    
                     <div class="form-group ">
                       <label class="control-label col-lg-2">Pais</label><div class="col-lg-10">
-                        <input class="form-control" name="pais" type="text"/>
+                        <input class="form-control" REQUIRED name="pais" type="text"/>
                       </div>
                     </div>
                     <div class="form-group ">
@@ -169,12 +173,10 @@
                       </div>
                     </div>
                     <!-- Falta colocar de que tipo es el usuario-->
-
-
                     <div class="form-group">
                       <div class="col-lg-offset-2 col-lg-10">
-                        <button class="btn btn-primary" type="submit" src='../conexion/operacionGuardar.php' >Guardar</button>
-                        <button class="btn btn-primary" type="submit" src='./administrador.php' >Volver</button>
+                      	<button type="submit" value="Add" name="submit">Guardar</button>
+                        <a class="btn btn-primary" href="administrador.php">Volver</a>
                       </div>
                     </div>
                   </form>
