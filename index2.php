@@ -30,16 +30,6 @@
 <body>
 
 	<!-- ************************************ -->
-	<!-- codigo en php inportados para configuraciones del index -->
-	<!-- ***************************************** -->
-
-	<?php 
-		include("php/conexion/anuncio_index.php");
-
-	 ?>
-
-
-	<!-- ************************************ -->
 	<!-- navbar -->
 	<!-- ***************************************** -->
 	<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="barra">
@@ -182,61 +172,170 @@
 	<section class="mt-3" id="plata">
 		<p class="nombre p-3 m-2 ">Ultimos anuncios</p>
 		<p class="nombre ml-5 pl-5">Plata</p>
-		<?php 
-			anuncio_plata();
-		?>
-		<input type="button" value="Mas Anuncios" onClick=" window.location.href='php/anuncio/anuncio_plata.php' ">
+		<div class="container ">
+			<div class="row">
+
+				<div class="col-md-3">
+						<a href="#" class="nav-link p3">
+					<div class="card btn btn-outline-primary p-2 ">
+
+						<div class="card-body ">
+
+								<img src="img/camara.png" class="img-fluid rounded-circle w-100" alt="person one">
+								<p class="anuncioTitulo">nombre del anuncio</p>
+								<p class="anuncio">descripcion</p>
+								<p class="anuncio">Precio: monto</p>
+
+						</div>
+
+					</div>
+					</a>
+				</div>
+
+				<div class="col-md-3">
+						<a href="#" class="nav-link p3">
+					<div class="card btn btn-outline-primary p-2 ">
+
+						<div class="card-body ">
+
+								<img src="img/camara.png" class="img-fluid rounded-circle w-100" alt="person one">
+								<p class="anuncioTitulo">nombre del anuncio</p>
+								<p class="anuncio">descripcion</p>
+								<p class="anuncio">Precio: monto</p>
+
+						</div>
+
+					</div>
+					</a>
+				</div>
+				<div class="col-md-3">
+						<a href="#" class="nav-link p3">
+					<div class="card btn btn-outline-primary p-2 ">
+
+						<div class="card-body ">
+
+								<img src="img/camara.png" class="img-fluid rounded-circle w-100" alt="person one">
+								<p class="anuncioTitulo">nombre del anuncio</p>
+								<p class="anuncio">descripcion</p>
+								<p class="anuncio">Precio: monto</p>
+
+						</div>
+
+					</div>
+					</a>
+				</div>
+				<div class="col-md-3">
+						<a href="#" class="nav-link p3">
+					<div class="card btn btn-outline-primary p-2 ">
+
+						<div class="card-body ">
+
+								<img src="img/camara.png" class="img-fluid rounded-circle w-100" alt="person one">
+								<p class="anuncioTitulo">nombre del anuncio</p>
+								<p class="anuncio">descripcion</p>
+								<p class="anuncio">Precio: monto</p>
+
+						</div>
+
+					</div>
+					</a>
+				</div>
+
+			</div>
+		</div>
+
 	</section>
-
-
 
 	<section class="mt-3" id="normal">
 		<p class="nombre ml-5 p-3 ">Normal</p>
-		<?php 
-			anuncio_comun();
-		?>
-		<input type="button" value="Mas Anuncios" onClick=" window.location.href='php/anuncio/anuncio_comun.php' ">
-	</section>
-	
+		<div class="container">
+			<div class="row">
 
+				<div class="col-md-3">
+						<a href="#" class="nav-link p3">
+					<div class="card btn btn-outline-primary p-2 ">
 
+						<div class="card-body ">
 
+								<img src="img/camara.png" class="img-fluid rounded-circle w-100" alt="person one">
+								<p class="anuncioTitulo">nombre del anuncio</p>
+								<p class="anuncio">descripcion</p>
+								<p class="anuncio">Precio: monto</p>
 
+						</div>
 
+					</div>
+					</a>
+				</div>
+				<div class="col-md-3">
+						<a href="#" class="nav-link p3">
+					<div class="card btn btn-outline-primary p-2 ">
 
+						<div class="card-body ">
 
+								<img src="img/camara.png" class="img-fluid rounded-circle w-100" alt="person one">
+								<p class="anuncioTitulo">nombre del anuncio</p>
+								<p class="anuncio">descripcion</p>
+								<p class="anuncio">Precio: monto</p>
 
+						</div>
 
+					</div>
+					</a>
+				</div>
+				<div class="col-md-3">
+						<a href="#" class="nav-link p3">
+					<div class="card btn btn-outline-primary p-2 ">
 
+						<div class="card-body ">
 
+								<img src="img/camara.png" class="img-fluid rounded-circle w-100" alt="person one">
+								<p class="anuncioTitulo">nombre del anuncio</p>
+								<p class="anuncio">descripcion</p>
+								<p class="anuncio">Precio: monto</p>
 
+						</div>
 
+					</div>
+					</a>
+				</div>
+				<div class="col-md-3">
+						<a href="#" class="nav-link p3">
+					<div class="card btn btn-outline-primary p-2 ">
 
+						<div class="card-body ">
 
+								<img src="img/camara.png" class="img-fluid rounded-circle w-100" alt="person one">
+								<p class="anuncioTitulo">nombre del anuncio</p>
+								<p class="anuncio">descripcion</p>
+								<p class="anuncio">Precio: monto</p>
 
+						</div>
 
+					</div>
+					</a>
+				</div>
 
-
-
-
-
-
-
-
-	<!-- *************************************************************** -->
-	<!-- 		categorias -->
-	<!-- **************************************************************** -->
-	<section class="container text-center ">
-		<p class="nombre p-2 m-2 ">Filtrar por categoria</p>
-		<div class="row">
-			<div class="accordion w-100" id="accordionExample">
-				<!--incluimos el codigo php de las categorias en este espacio  -->
-				<?php
-				include("loginMethods/categorias.php");
-				?>
 			</div>
 		</div>
 	</section>
+<!-- *************************************************************** -->
+<!-- 		categorias -->
+<!-- **************************************************************** -->
+<section class="container text-center ">
+	<p class="nombre p-2 m-2 ">Filtrar por categoria</p>
+		<div class="row">
+			<div class="accordion w-100" id="accordionExample">
+					<!--incluimos el codigo php de las categorias en este espacio  -->
+					<?php
+
+							include("loginMethods/categorias.php");
+
+					 ?>
+
+			</div>
+	</div>
+</section>
 
 
 <!-- ************************************************************ -->
@@ -296,6 +395,7 @@
 
 
 
+	<script src="http://localhost:35729/livereload.js" charset="utf-8"></script>
 	<!-- bootstrap js -->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 
