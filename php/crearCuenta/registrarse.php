@@ -18,8 +18,9 @@
 			<h1>Nuevo Usuario</h1>
 			<input type="text" REQUIRED name="email" class="Email" placeholder="Correo Electronico">
 			<input type="password" REQUIRED name="contra" class="Address" placeholder="Contraseña">
-			<input type="text" REQUIRED name="nombre" class="Name" placeholder="Nombre">
-			<button type="submit" value="Add" name="submit">Registrarse</button>
+			<input type="text" REQUIRED name="nombre" class="Name" placeholder="Nombre Usuario">
+			<input type="checkbox" value=""> Acepto los terminos y condiciones
+			<button type="submit" value="Add" name="submit" >Registrarse</button>
 		</form>
 	</div>
 </body>

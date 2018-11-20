@@ -1,18 +1,53 @@
-.nombre{
-	font-weight: bold;
-	font-size: 24px;
-
-}
-.listaAcor{
-	list-style: none;
-}
 .inicio{
 	box-shadow: 2px 2px 5px #000;
 	background: #ecf0f1;
 }
 .subir{
 	background: #c8d6e5;
+	box-shadow: 2px 2px 5px #000;
 }
 #plata,#normal{
 	background: #ecf0f1;
+}
+.anuncioTitulo{
+
+		font-size: 19px;
+}
+.anuncio{
+	font-size: 17px;
+}
+.busqueda{
+	width: 400px;
+	height: 35px;
+}
+.botonBuscar{
+
+	width: 80px;
+	height: 45px;
+
+
+}
+.main_header{
+	position: relative;
+	background: url(../../img/venta.jpg) ;
+	background-size: cover;
+	min-height: 700px;
+}
+.background-overlay{
+	position: absolute;
+	background:rgba(0, 151, 230,.5);
+	top: 20px;
+	left: 0;
+	width: 100%;
+	height: 700px;
+
+}
+.oro{
+	background:rgba(0, 151, 230,.8);
+	border-radius: 10px;
+}
+.imgheader{
+	width: 1000px;
+	heigth: 1000px;
+	border-radius: 5px;
 }

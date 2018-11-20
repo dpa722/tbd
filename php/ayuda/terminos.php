@@ -213,7 +213,7 @@
 			<li><a href="ayuda.php">Ayuda</a></li>
 			<li><a href="terminos_condiciones.php">Terminos y condiciones</a></li>
 			<li><a href="#">Acerca de la pagina</a></li>
-			<li><a href="/PHP/tbd index/index.php">Ir al inicio</a></li>
+			<li><a href="index.php">Ir al inicio</a></li>
 		</ul>
 	</footer>
 	<!-- fin del pie de pagina -->

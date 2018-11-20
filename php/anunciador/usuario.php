@@ -8,23 +8,26 @@
 </head>
 <body>
 
-	<!-- Side        principal de administrador diferenciar-->
-
-	
-	<section class="full-box cover dashboard-sideBar ">
-		<div class="full-box dashboard-sideBar-bg btn-menu-dashboard "></div>
-		<div class="full-box dashboard-sideBar-ct ">
+	<!-- Side -->
+	<section class="full-box cover dashboard-sideBar">
+		<div class="full-box dashboard-sideBar-bg btn-menu-dashboard"></div>
+		<div class="full-box dashboard-sideBar-ct">
 			<!--Titulo -->
 			<div class="full-box text-uppercase text-center text-titles dashboard-sideBar-title">
-				ADMINISTRADOR <i></i>
+				USUARIO <i class="zmdi zmdi-close btn-menu-dashboard visible-xs"></i>
 			</div>
 			<!-- Informacion -->
-			<div class="full-box dashboard-sideBar-UserInfo ">
+			<div class="full-box dashboard-sideBar-UserInfo">
 				<figure class="full-box">
-					<img src="fotoadmin.php" >
+					<img src="" >
 					<figcaption class="text-center text-titles">Nombre del Usuario</figcaption>
 				</figure>
 				<ul class="full-box list-unstyled text-center">
+					<li>
+						<a href="configuracion_usuario.php">
+							<i class="glyphicon glyphicon-cog"></i>
+						</a>
+					</li>
 					<li>
 						<a class="btn-exit-system">
 							<i class="glyphicon glyphicon-off"></i>
@@ -36,55 +39,84 @@
 			<ul class="list-unstyled full-box dashboard-sideBar-Menu">
 				<li>
 					<a href="../../index2.php">
-						<i class="glyphicon glyphicon-th"></i> Pagina Principal
+						<i class="glyphicon glyphicon-th"></i> Pagina del Usuario
 					</a>
 				</li>
 				<li>
-					<a class="btn-sideBar-SubMenu">
-						<i class="glyphicon glyphicon-menu-right"></i> Administracion 
+					<a href="#" class="btn-sideBar-SubMenu">
+						<i class="glyphicon glyphicon-menu-right"></i> Publicaciones <i></i>
 					</a>
 					<ul class="list-unstyled full-box">
 						<li>
-							<a href="administrador.php"><i class="glyphicon glyphicon-cog"></i> Configuraciones</a>
+							<a href="#"><i class="glyphicon glyphicon-resize-small"></i> Tus publicaciones</a>
+							<li>
+							<a href="extencion/crear_anuncio.php"><i class="glyphicon glyphicon-resize-full"></i> Publicar anuncio</a>
+						</li>
 						</li>
 					</ul>
 				</li>
 				<li>
-					<a class="btn-sideBar-SubMenu">
-						<i class="glyphicon glyphicon-menu-right"></i> Usuarios
+					<a href="#" class="btn-sideBar-SubMenu">
+						<i class="glyphicon glyphicon-menu-right"></i> Perfil <i></i>
 					</a>
 					<ul class="list-unstyled full-box">
 						<li>
-							<a href="extencion/lista_administradores.php"><i class="glyphicon glyphicon-king"></i> Administradores</a>
-						</li>
-						<li>
-							<a href="extencion/lista_usuarios.php"><i class="glyphicon glyphicon-user"></i> Usuarios</a>
+							<a href="#"><i class="glyphicon glyphicon-option-vertical"></i> Datos de Usuario</a>
 						</li>
 					</ul>
 				</li>
 				<li>
-					<a class="btn-sideBar-SubMenu">
-						<i class="glyphicon glyphicon-menu-right"></i> Prioridades 
+					<a href="#" class="btn-sideBar-SubMenu">
+						<i class="glyphicon glyphicon-menu-right"></i> Publicaciones Pago 
 					</a>
 					<ul class="list-unstyled full-box">
 						<li>
-							<a href="extencion/usuarios_prioridad.php"><i class="glyphicon glyphicon-bishop"></i> Usuarios con Prioridad</a>
+							<a href="#"><i class="glyphicon glyphicon-phone"></i> Pagas por publicaciones</a>
 						</li>
 						<li>
-							<a href="extenicion/publicaciones.php"><i class="glyphicon glyphicon-transfer"></i> Rotacion de Publicaciones</a>
+							<a href="#"><i class="glyphicon glyphicon-star"></i> Publicaciones con Pago</a>
 						</li>
 					</ul>
 				</li>
 				<li>
-					<a class="btn-sideBar-SubMenu">
-						<i class="glyphicon glyphicon-menu-right"></i> Ayuda
+					<a href="#" class="btn-sideBar-SubMenu">
+						<i class="glyphicon glyphicon-menu-right"></i> Mensajes <i></i>
 					</a>
 					<ul class="list-unstyled full-box">
 						<li>
-							<a href=""><i ></i> Ternimos y condiciones</a>
+							<a href="#"><i class="glyphicon glyphicon-open-file"></i> Nuevo Mensaje</a>
 						</li>
 						<li>
-							<a href="extencion/Programador.php"><i class="glyphicon glyphicon-knight"></i> ¿El Programador?</a>
+							<a href="#"><i class="glyphicon glyphicon-paste"></i> Mensajes Enviados</a>
+						<li>
+							<a href="#"><i class="glyphicon glyphicon-copy"></i> Mensajes Recividos</a>
+						</li>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#" class="btn-sideBar-SubMenu">
+						<i class="glyphicon glyphicon-menu-right"></i> Favoritos <i></i>
+					</a>
+					<ul class="list-unstyled full-box">
+						<li>
+							<a href="#"><i class="glyphicon glyphicon-glass"></i> Tus publicaciones</a>
+						<li>
+							<a href="#"><i class="glyphicon glyphicon-cutlery"></i> Tus Favoritos</a>
+						</li>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#!" class="btn-sideBar-SubMenu">
+						<i class="glyphicon glyphicon-menu-right"></i> Ayuda 
+					</a>
+					<ul class="list-unstyled full-box">
+						<li>
+							<a href="#"><i class="glyphicon glyphicon-align-center"></i> Terminos y condiciones</a>
+						</li>
+						<li>
+							<a href="#"><i class="glyphicon glyphicon-hand-down"></i> ¿Contactos?</a>
 						</li>
 					</ul>
 				</li>
@@ -93,17 +125,17 @@
 	</section>
 
 	<!-- contenedor-->
-	<section class="full-box dashboard-contentPage ">
+	<section class="full-box dashboard-contentPage">
 		<!-- NavBar -->
 		<nav class="full-box dashboard-Navbar">
 			<ul class="full-box list-unstyled text-right">
 				<li class="pull-left">
-					<a class="btn-menu-dashboard"><i class="glyphicon glyphicon-align-justify"></i></a>
+					<a href="#!" class="btn-menu-dashboard"><i class="glyphicon glyphicon-list"></i></a>
 				</li>
 				<li>
-					<a class="btn-Notifications-area">
-						<i class="glyphicon glyphicon-envelope"></i>
-						<span class="badge"><!--notificaciones sacar de bd --></span>
+					<a href="#!" class="btn-Notifications-area">
+						<i class="glyphicon glyphicon-comment"></i>
+						<span class="badge"><!-- numero de otificaciones --></span>
 					</a>
 				</li>
 			</ul>
@@ -111,48 +143,13 @@
 		<!-- contenido de la pagina //falta aumentar en esta parte -->
 		<div class="container-fluid">
 			<div class="page-header">
-			  <h1 class="text-titles">Control de la Pagina</h1>
+			  <h1 class="text-titles">USUARIO</h1>
 			</div>
 		</div>
 		<div class="full-box text-center" style="padding: 30px 10px;">
-			<article class="full-box tile" >
-				<div class="full-box tile-title text-center text-titles text-uppercase" >
-					<a href="extencion/lista_administradores.php">ADMINISTRADORES</a>
-				</div>
-				<div class="full-box tile-icon text-center">
-					<i><a class="glyphicon glyphicon-king" href="extencion/lista_administradores.php"></a></i>
-				</div>
-				<div class="full-box tile-number text-titles">
-					<p class="full-box">0</p>
-					<small><a href="extencion/lista_administradores.php">Registrados</a></small>
-				</div>
-			</article>
+			
+		<!-- contenido de la pagina //falta aumentar en esta parte    publicaciones del usuario -->
 
-
-			<article class="full-box tile">
-				<div class="full-box tile-title text-center text-titles text-uppercase" >
-					<a href="extencion/lista_usuario.php">USUARIOS</a>
-				</div>
-				<div class="full-box tile-icon text-center">
-					<i><a class="glyphicon glyphicon-user" href="extencion/administradores.php"></a></i>
-				</div>
-				<div class="full-box tile-number text-titles">
-					<p class="full-box"><a href="extencion/administradores.php">0</a></p>
-					<small><a href="extencion/lista_publicaciones.php">Registrados</a></small>
-				</div>
-			</article>
-			<article class="full-box tile">
-				<div class="full-box tile-title text-center text-titles text-uppercase">
-					<a href="../usuario/usuario.php">PUBLICACIONES</a>
-				</div>
-				<div class="full-box tile-icon text-center">
-					<i><a class="glyphicon glyphicon-pencil" href="extencion/administradores.php"></a></i>
-				</div>
-				<div class="full-box tile-number text-titles">
-					<p class="full-box"><a href="extencion/administradores.php">0</a></p>
-					<small><a href="extencion/administradores.php">Registrados</a></small>
-				</div>
-			</article>
 		</div>
 	</section>
 
@@ -201,8 +198,8 @@
 	
 	<!--====== Scripts -->
 	<script src="../../js/jquery.min.js"></script>
+	<script src="../../js/usuarios/sweetalert2.min.js"></script>
 	<script src="../../js/bootstrap.min.js"></script>
-	<script src="../../js/usuarios/sweetalert2.min.js"></script>	
 	<script src="../../js/usuarios/material.min.js"></script>
 	<script src="../../js/usuarios/ripples.min.js"></script>
 	<script src="../../js/usuarios/jquery.mCustomScrollbar.concat.min.js"></script>

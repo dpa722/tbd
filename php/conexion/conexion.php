@@ -1,7 +1,4 @@
-<?php 
-	$conexion = new mysqli("localhost","root","","TBD");
-	if($conexion){
-	}else{
-		echo "conexion no exitosa";
-	}
+<?php
+	$conexion = new mysqli("localhost","root","","TBD") ;
+	$conexion -> set_charset("utf8");
  ?>
