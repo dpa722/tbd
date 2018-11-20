@@ -4,7 +4,7 @@
 	<title>Administrador</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<link rel="stylesheet" href="../../css/administrador/usuarios.css">
+	<link rel="stylesheet" href="../../../css/administrador/usuarios.css">
 </head>
 <body>
 	<?php 
@@ -36,7 +36,7 @@
 			<!--Menu -->
 			<ul class="list-unstyled full-box dashboard-sideBar-Menu">
 				<li>
-					<a href="../../index.php">
+					<a href="../../../index2.php">
 						<i class="glyphicon glyphicon-th"></i> Pagina Principal
 					</a>
 				</li>
@@ -46,7 +46,7 @@
 					</a>
 					<ul class="list-unstyled full-box">
 						<li>
-							<a href="administrador.php"><i class="glyphicon glyphicon-cog"></i> Configuraciones</a>
+							<a href="../administrador.php"><i class="glyphicon glyphicon-cog"></i> Configuraciones</a>
 						</li>
 					</ul>
 				</li>
@@ -56,10 +56,10 @@
 					</a>
 					<ul class="list-unstyled full-box">
 						<li>
-							<a href="administradores.php"><i class="glyphicon glyphicon-king"></i> Administradores</a>
+							<a href="lista_administradores.php"><i class="glyphicon glyphicon-king"></i> Administradores</a>
 						</li>
 						<li>
-							<a href="#"><i class="glyphicon glyphicon-user"></i> Usuarios</a>
+							<a href="lista_usuarios.php"><i class="glyphicon glyphicon-user"></i> Usuarios</a>
 						</li>
 					</ul>
 				</li>
@@ -69,18 +69,21 @@
 					</a>
 					<ul class="list-unstyled full-box">
 						<li>
-							<a href="#"><i class="glyphicon glyphicon-bishop"></i> Usuarios con Prioridad</a>
+							<a href="usuarios_prioridad.php"><i class="glyphicon glyphicon-bishop"></i> Usuarios con Prioridad</a>
 						</li>
 						<li>
-							<a href="#"><i class="glyphicon glyphicon-transfer"></i> Rotacion de Publicaciones</a>
+							<a href="publicaciones.php"><i class="glyphicon glyphicon-transfer"></i> Rotacion de Publicaciones</a>
 						</li>
 					</ul>
 				</li>
 				<li>
-					<a href="#!" class="btn-sideBar-SubMenu">
+					<a href="#" class="btn-sideBar-SubMenu">
 						<i class="glyphicon glyphicon-menu-right"></i> Ayuda
 					</a>
 					<ul class="list-unstyled full-box">
+						<li>
+							<a href=""><i ></i> Ternimos y condiciones</a>
+						</li>
 						<li>
 							<a href="Programador.php"><i class="glyphicon glyphicon-knight"></i> ¿El Programador?</a>
 						</li>
@@ -98,12 +101,6 @@
 				<li class="pull-left">
 					<a class="btn-menu-dashboard"><i class="glyphicon glyphicon-align-justify"></i></a>
 				</li>
-				<li>
-					<a class="btn-Notifications-area">
-						<i class="glyphicon glyphicon-envelope"></i>
-						<span class="badge"><!--notificaciones sacar de bd --></span>
-					</a>
-				</li>
 			</ul>
 		</nav>
 		<!-- contenido de la pagina //falta aumentar en esta parte -->
@@ -113,30 +110,20 @@
 			</div>
 		</div>
 
-
-		<section>
-			<button type="button" class="btn btn-default btn-lg" onclick="location.href='nuevo_administrador.php' ">
-				<span class="glyphicon glyphicon-star" aria-hidden="true"></span> Nuevo Administrador
-			</button>
-		</section>
-
-
-
-
 		<section>
 			<!-- recuperacion de administradores -->
 			<div class="row">
 				<div class="col-lg-12">
 					<section class="panel">
 						<header class="panel-heading">
-							Lista de Administradores
+							Lista de Usuarios
 						</header>
 						<div class="panel-body">
 							<div class="form">
 								<form class="form-validate form-horizontal" id="feedback_form" method="get" action="">
 								
 								<?php  
-									lista_administradores();
+									lista_usuarios();
 								?>
 								</form>
 							</div>
@@ -146,58 +133,15 @@
 			</div>
 		</section>
 	</section>
-
-	<!-- Notificaciones -->
-	<section class="full-box Notifications-area">
-		<div class="full-box Notifications-bg btn-Notifications-area"></div>
-		<div class="full-box Notifications-body">
-			<div class="Notifications-body-title text-titles text-center">
-				Notificaciones <i class="zmdi zmdi-close btn-Notifications-area"></i>
-			</div>
-			<div class="list-group">
-				<div class="list-group-item">
-					<div class="row-action-primary">
-						<i class="zmdi zmdi-alert-triangle"></i>
-					</div>
-					<div class="row-content">
-						<h4 class="list-group-item-heading">Mensaje Recibido</h4>
-						<p class="list-group-item-text">Ocurrio un reporte de la publicacion por parte de muchos usuarios</p>
-					</div>
-				</div>
-				<div class="list-group-separator"></div>
-				<div class="list-group-item">
-					<div class="row-action-primary">
-						<i class="zmdi zmdi-alert-octagon"></i>
-					</div>
-					<div class="row-content">
-						<h4 class="list-group-item-heading">Mensaje Recibido</h4>
-						<p class="list-group-item-text">Ocurrio un reporte de la publicacion por parte de muchos usuarios</p>
-					</div>
-				</div>
-				<div class="list-group-separator"></div>
-				<div class="list-group-item">
-					<div class="row-action-primary">
-						<i class="zmdi zmdi-help"></i>
-					</div>
-					<div class="row-content">
-						<h4 class="list-group-item-heading">Mensaje Recibido</h4>
-						<p class="list-group-item-text">Ocurrio un reporte de la publicacion por parte de muchos usuarios</p>
-					</div>
-				</div>
-				<div class="list-group-separator"></div>
-			</div>
-		</div>
-	</section>
-
 	
 	<!--====== Scripts -->
-	<script src="../../js/jquery.min.js"></script>
-	<script src="../../js/bootstrap.min.js"></script>
-	<script src="../../js/usuarios/sweetalert2.min.js"></script>	
-	<script src="../../js/usuarios/material.min.js"></script>
-	<script src="../../js/usuarios/ripples.min.js"></script>
-	<script src="../../js/usuarios/jquery.mCustomScrollbar.concat.min.js"></script>
-	<script src="../../js/usuarios/usuarios.js"></script>
+	<script src="../../../js/jquery.min.js"></script>
+	<script src="../../../js/bootstrap.min.js"></script>
+	<script src="../../../js/usuarios/sweetalert2.min.js"></script>	
+	<script src="../../../js/usuarios/material.min.js"></script>
+	<script src="../../../js/usuarios/ripples.min.js"></script>
+	<script src="../../../js/usuarios/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="../../../js/usuarios/usuarios.js"></script>
 	<script>
 		$.material.init();
 	</script>

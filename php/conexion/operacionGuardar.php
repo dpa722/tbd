@@ -1,5 +1,5 @@
 <?php 
-	include("../conexion/conexion.php");
+	include("conexion.php");
 
 	$email = $_POST['email'];
 	$contra = $_POST['contra'];

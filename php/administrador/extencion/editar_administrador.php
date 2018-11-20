@@ -4,9 +4,50 @@
 	<title>Administrador</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<link rel="stylesheet" href="../../css/administrador/usuarios.css">
+	<link rel="stylesheet" href="../../../css/administrador/usuarios.css">
 </head>
 <body>
+
+<?php 
+	include("../../conexion/conexion.php");
+
+	if (!isset($_POST["boton_actualizar"])) {
+	//en caso de que no se halla pulsado el boton
+	$ci=$_GET["id"];
+	$nombre=$_GET["nombre"];
+	$paterno=$_GET["apellido"];
+	$materno=$_GET["materno"];
+	$correo=$_GET["correo"];
+	$departamento=$_GET["departamento"];
+	$pais=$_GET["pais"];
+	}else{
+
+		$ci=$_POST["ci"];
+		$nombre=$_POST["nombre"];
+		$paterno=$_POST["apPaterno"];
+		$materno=$_POST["apMaterno"];
+		$perfil=$_POST["foto"];
+		$contraseña=$_POST["contra"];
+		$correo=$_POST["correo"];
+		$pais=$_POST["pais"];
+		$departamento=$_POST["dtpo"];
+
+		$consulta1 = "UPDATE cuenta SET email='$correo' contrasena='$contra' WHERE email='$correo ";
+		$consulta2 = "UPDATE administrador SET ciadmin='$ci' nombreadmin='$nombre' apepaadmin='$paterno' apemaadmin='$materno' foto='$perfil'  departamentoAdmin='$departamento' paisadmin='$pais' emailadmin = '$correo' 
+					 WHERE ciadmin=$ci";
+		
+		
+
+
+		mysqli_query($conexion, $consulta1) or die('Error en la consulta UPDATE 1');
+		mysqli_query($conexion, $consulta2) or die('Error en la consulta UPDATE 2');
+		mysqli_close($conexion);
+
+		header("location: lista_administradores");
+	}
+?>
+
+
 	<!-- Side -->
 	<section class="full-box cover dashboard-sideBar ">
 		<div class="full-box dashboard-sideBar-bg btn-menu-dashboard "></div>
@@ -18,7 +59,7 @@
 			<!-- Informacion -->
 			<div class="full-box dashboard-sideBar-UserInfo ">
 				<figure class="full-box">
-					<img src="colocarFoto()" >
+					<img src="" >
 					<figcaption class="text-center text-titles">Nombre del Usuario</figcaption>
 				</figure>
 				<ul class="full-box list-unstyled text-center">
@@ -32,7 +73,7 @@
 			<!--Menu -->
 			<ul class="list-unstyled full-box dashboard-sideBar-Menu">
 				<li>
-					<a href="../../index.php">
+					<a href="../../../index2.php">
 						<i class="glyphicon glyphicon-th"></i> Pagina Principal
 					</a>
 				</li>
@@ -42,7 +83,7 @@
 					</a>
 					<ul class="list-unstyled full-box">
 						<li>
-							<a href="#"><i class="glyphicon glyphicon-cog"></i> Configuraciones</a>
+							<a href="../administrador.php"><i class="glyphicon glyphicon-cog"></i> Configuraciones</a>
 						</li>
 					</ul>
 				</li>
@@ -52,10 +93,10 @@
 					</a>
 					<ul class="list-unstyled full-box">
 						<li>
-							<a href="administradores.php"><i class="glyphicon glyphicon-king"></i> Administradores</a>
+							<a href="lista_administradores.php"><i class="glyphicon glyphicon-king"></i> Administradores</a>
 						</li>
 						<li>
-							<a href="#"><i class="glyphicon glyphicon-user"></i> Usuarios</a>
+							<a href="lista_usuarios.php"><i class="glyphicon glyphicon-user"></i> Usuarios</a>
 						</li>
 					</ul>
 				</li>
@@ -65,18 +106,21 @@
 					</a>
 					<ul class="list-unstyled full-box">
 						<li>
-							<a href="#"><i class="glyphicon glyphicon-bishop"></i> Usuarios con Prioridad</a>
+							<a href="usuarios_prioridad.php"><i class="glyphicon glyphicon-bishop"></i> Usuarios con Prioridad</a>
 						</li>
 						<li>
-							<a href="#"><i class="glyphicon glyphicon-transfer"></i> Rotacion de Publicaciones</a>
+							<a href="publicaciones.php"><i class="glyphicon glyphicon-transfer"></i> Rotacion de Publicaciones</a>
 						</li>
 					</ul>
 				</li>
 				<li>
-					<a href="#!" class="btn-sideBar-SubMenu">
+					<a href="#" class="btn-sideBar-SubMenu">
 						<i class="glyphicon glyphicon-menu-right"></i> Ayuda
 					</a>
 					<ul class="list-unstyled full-box">
+						<li>
+							<a href=""><i ></i> Ternimos y condiciones</a>
+						</li>
 						<li>
 							<a href="Programador.php"><i class="glyphicon glyphicon-knight"></i> ¿El Programador?</a>
 						</li>
@@ -85,7 +129,6 @@
 			</ul>
 		</div>
 	</section>
-
 	<!-- contenedor-->
 	<section class="full-box dashboard-contentPage ">
 		<!-- NavBar -->
@@ -93,12 +136,6 @@
 			<ul class="full-box list-unstyled text-right">
 				<li class="pull-left">
 					<a class="btn-menu-dashboard"><i class="glyphicon glyphicon-align-justify"></i></a>
-				</li>
-				<li>
-					<a class="btn-Notifications-area">
-						<i class="glyphicon glyphicon-envelope"></i>
-						<span class="badge"><!--notificaciones sacar de bd --></span>
-					</a>
 				</li>
 			</ul>
 		</nav>
@@ -125,7 +162,7 @@
               </header>
               <div class="panel-body">
                 <div class="form">
-                  <form class="form-validate form-horizontal" action="datos.php" method="POST" enctype="multipart/form-data">
+                  <form class="form-validate form-horizontal" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST" enctype="multipart/form-data">
                   	<div>
                       <label class="control-label col-lg-2">foto de Perfil</label><div class="col-lg-10">
                         <input  type="file" REQUERED name="foto" />
@@ -133,27 +170,27 @@
                     </div><br><br>
                     <div class="form-group ">
                       <label class="control-label col-lg-2">Nombre</label><div class="col-lg-10">
-                        <input class="form-control" REQUIRED name="nombre"  type="text" placeholder="Nombre Completo">
+                        <input class="form-control" REQUIRED name="nombre"  type="text" placeholder="Nombre Completo" value="<?php echo $nombre ?>"> 
                       </div>
                     </div>
                     <div class="form-group ">
                       <label class="control-label col-lg-2">Apellido Peterno</label><div class="col-lg-10">
-                        <input class="form-control" REQUIRED name="apPaterno" type="text"/>
+                        <input class="form-control" REQUIRED name="apPaterno" type="text" value="<?php echo $paterno ?>" />
                       </div>
                     </div>
                     <div class="form-group ">
                       <label class="control-label col-lg-2">Apellido Materno</label><div class="col-lg-10">
-                        <input class="form-control" REQUIRED name="apMaterno" type="text"/>
+                        <input class="form-control" REQUIRED name="apMaterno" type="text" value="<?php echo $materno ?>" />
                       </div>
                     </div>
                     <div class="form-group ">
                       <label class="control-label col-lg-2">CI</label><div class="col-lg-10">
-                        <input class="form-control" REQUIRED name="ci" type="text"/>
+                        <input class="form-control" REQUIRED name="ci" type="text" value="<?php echo $ci ?>" />
                       </div>
                     </div>
                     <div class="form-group ">
                       <label class="control-label col-lg-2">Correo</label><div class="col-lg-10">
-                        <input class="form-control" REQUIRED name="correo" type="text"/>
+                        <input class="form-control" REQUIRED name="correo" type="text" value="<?php echo $correo ?>" />
                       </div>
                     </div>
                     <div class="form-group ">
@@ -164,84 +201,40 @@
                     
                     <div class="form-group ">
                       <label class="control-label col-lg-2">Pais</label><div class="col-lg-10">
-                        <input class="form-control" REQUIRED name="pais" type="text"/>
+                        <input class="form-control" REQUIRED name="pais" type="text" value="<?php echo $pais ?>" />
                       </div>
                     </div>
                     <div class="form-group ">
                       <label class="control-label col-lg-2">Departamento</label><div class="col-lg-10">
-                        <input class="form-control" name="dtpo" type="text"/>
+                        <input class="form-control" name="dtpo" type="text" value="<?php echo $departamento ?>" />
                       </div>
                     </div>
                     <!-- Falta colocar de que tipo es el usuario-->
                     <div class="form-group">
                       <div class="col-lg-offset-2 col-lg-10">
-                      	<button type="submit" value="Add" name="submit">Guardar</button>
-                        <a class="btn btn-primary" href="administrador.php">Volver</a>
+                      	<button type="submit" value="nuevo_administrador" name="boton_actualizar">actualizar
+
+                      	</button>
+                        <a class="btn btn-primary" href="lista_administradores.php">Volver</a>
                       </div>
                     </div>
                   </form>
                 </div>
               </div>
 		</section>
-
-
-
-
-
-
 	</section>
 
-	<!-- Notificaciones -->
-	<section class="full-box Notifications-area">
-		<div class="full-box Notifications-bg btn-Notifications-area"></div>
-		<div class="full-box Notifications-body">
-			<div class="Notifications-body-title text-titles text-center">
-				Notificaciones <i class="zmdi zmdi-close btn-Notifications-area"></i>
-			</div>
-			<div class="list-group">
-				<div class="list-group-item">
-					<div class="row-action-primary">
-						<i class="zmdi zmdi-alert-triangle"></i>
-					</div>
-					<div class="row-content">
-						<h4 class="list-group-item-heading">Mensaje Recibido</h4>
-						<p class="list-group-item-text">Ocurrio un reporte de la publicacion por parte de muchos usuarios</p>
-					</div>
-				</div>
-				<div class="list-group-separator"></div>
-				<div class="list-group-item">
-					<div class="row-action-primary">
-						<i class="zmdi zmdi-alert-octagon"></i>
-					</div>
-					<div class="row-content">
-						<h4 class="list-group-item-heading">Mensaje Recibido</h4>
-						<p class="list-group-item-text">Ocurrio un reporte de la publicacion por parte de muchos usuarios</p>
-					</div>
-				</div>
-				<div class="list-group-separator"></div>
-				<div class="list-group-item">
-					<div class="row-action-primary">
-						<i class="zmdi zmdi-help"></i>
-					</div>
-					<div class="row-content">
-						<h4 class="list-group-item-heading">Mensaje Recibido</h4>
-						<p class="list-group-item-text">Ocurrio un reporte de la publicacion por parte de muchos usuarios</p>
-					</div>
-				</div>
-				<div class="list-group-separator"></div>
-			</div>
-		</div>
-	</section>
+
 
 	
 	<!--====== Scripts -->
-	<script src="../../js/jquery.min.js"></script>
-	<script src="../../js/bootstrap.min.js"></script>
-	<script src="../../js/usuarios/sweetalert2.min.js"></script>	
-	<script src="../../js/usuarios/material.min.js"></script>
-	<script src="../../js/usuarios/ripples.min.js"></script>
-	<script src="../../js/usuarios/jquery.mCustomScrollbar.concat.min.js"></script>
-	<script src="../../js/usuarios/usuarios.js"></script>
+	<script src="../../../js/jquery.min.js"></script>
+	<script src="../../../js/bootstrap.min.js"></script>
+	<script src="../../../js/usuarios/sweetalert2.min.js"></script>	
+	<script src="../../../js/usuarios/material.min.js"></script>
+	<script src="../../../js/usuarios/ripples.min.js"></script>
+	<script src="../../../js/usuarios/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="../../../js/usuarios/usuarios.js"></script>
 	<script>
 		$.material.init();
 	</script>

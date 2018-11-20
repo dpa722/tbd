@@ -50,7 +50,7 @@
 						<li>
 							<a href="#"><i class="glyphicon glyphicon-resize-small"></i> Tus publicaciones</a>
 							<li>
-							<a href="#"><i class="glyphicon glyphicon-resize-full"></i> Publicar anuncio</a>
+							<a href="extencion/crear_anuncio.php"><i class="glyphicon glyphicon-resize-full"></i> Publicar anuncio</a>
 						</li>
 						</li>
 					</ul>

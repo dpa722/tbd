@@ -8,7 +8,9 @@
 </head>
 <body>
 
-	<!-- Side -->
+	<!-- Side        principal de administrador diferenciar-->
+
+	
 	<section class="full-box cover dashboard-sideBar ">
 		<div class="full-box dashboard-sideBar-bg btn-menu-dashboard "></div>
 		<div class="full-box dashboard-sideBar-ct ">
@@ -19,7 +21,7 @@
 			<!-- Informacion -->
 			<div class="full-box dashboard-sideBar-UserInfo ">
 				<figure class="full-box">
-					<img src="" >
+					<img src="fotoadmin.php" >
 					<figcaption class="text-center text-titles">Nombre del Usuario</figcaption>
 				</figure>
 				<ul class="full-box list-unstyled text-center">
@@ -33,53 +35,56 @@
 			<!--Menu -->
 			<ul class="list-unstyled full-box dashboard-sideBar-Menu">
 				<li>
-					<a href="../../index.php">
+					<a href="../../index2.php">
 						<i class="glyphicon glyphicon-th"></i> Pagina Principal
 					</a>
 				</li>
 				<li>
-					<a href="#" class="btn-sideBar-SubMenu">
+					<a class="btn-sideBar-SubMenu">
 						<i class="glyphicon glyphicon-menu-right"></i> Administracion 
 					</a>
 					<ul class="list-unstyled full-box">
 						<li>
-							<a href="#"><i class="glyphicon glyphicon-cog"></i> Configuraciones</a>
+							<a href="administrador.php"><i class="glyphicon glyphicon-cog"></i> Configuraciones</a>
 						</li>
 					</ul>
 				</li>
 				<li>
-					<a href="#" class="btn-sideBar-SubMenu">
+					<a class="btn-sideBar-SubMenu">
 						<i class="glyphicon glyphicon-menu-right"></i> Usuarios
 					</a>
 					<ul class="list-unstyled full-box">
 						<li>
-							<a href="administradores.php"><i class="glyphicon glyphicon-king"></i> Administradores</a>
+							<a href="extencion/lista_administradores.php"><i class="glyphicon glyphicon-king"></i> Administradores</a>
 						</li>
 						<li>
-							<a href="usuarios.php"><i class="glyphicon glyphicon-user"></i> Usuarios</a>
+							<a href="extencion/lista_usuarios.php"><i class="glyphicon glyphicon-user"></i> Usuarios</a>
 						</li>
 					</ul>
 				</li>
 				<li>
-					<a href="#" class="btn-sideBar-SubMenu">
+					<a class="btn-sideBar-SubMenu">
 						<i class="glyphicon glyphicon-menu-right"></i> Prioridades 
 					</a>
 					<ul class="list-unstyled full-box">
 						<li>
-							<a href="#"><i class="glyphicon glyphicon-bishop"></i> Usuarios con Prioridad</a>
+							<a href="extencion/usuarios_prioridad.php"><i class="glyphicon glyphicon-bishop"></i> Usuarios con Prioridad</a>
 						</li>
 						<li>
-							<a href="#"><i class="glyphicon glyphicon-transfer"></i> Rotacion de Publicaciones</a>
+							<a href="extenicion/publicaciones.php"><i class="glyphicon glyphicon-transfer"></i> Rotacion de Publicaciones</a>
 						</li>
 					</ul>
 				</li>
 				<li>
-					<a href="#!" class="btn-sideBar-SubMenu">
+					<a class="btn-sideBar-SubMenu">
 						<i class="glyphicon glyphicon-menu-right"></i> Ayuda
 					</a>
 					<ul class="list-unstyled full-box">
 						<li>
-							<a href="Programador.php"><i class="glyphicon glyphicon-knight"></i> ¿El Programador?</a>
+							<a href=""><i ></i> Ternimos y condiciones</a>
+						</li>
+						<li>
+							<a href="extencion/Programador.php"><i class="glyphicon glyphicon-knight"></i> ¿El Programador?</a>
 						</li>
 					</ul>
 				</li>
@@ -110,40 +115,42 @@
 			</div>
 		</div>
 		<div class="full-box text-center" style="padding: 30px 10px;">
-			<article class="full-box tile">
-				<div class="full-box tile-title text-center text-titles text-uppercase">
-					Administradores
+			<article class="full-box tile" >
+				<div class="full-box tile-title text-center text-titles text-uppercase" >
+					<a href="extencion/lista_administradores.php">ADMINISTRADORES</a>
 				</div>
 				<div class="full-box tile-icon text-center">
-					<i class="glyphicon glyphicon-king"></i>
+					<i><a class="glyphicon glyphicon-king" href="extencion/lista_administradores.php"></a></i>
 				</div>
 				<div class="full-box tile-number text-titles">
 					<p class="full-box">0</p>
-					<small>Registrados</small>
+					<small><a href="extencion/lista_administradores.php">Registrados</a></small>
+				</div>
+			</article>
+
+
+			<article class="full-box tile">
+				<div class="full-box tile-title text-center text-titles text-uppercase" >
+					<a href="extencion/lista_usuario.php">USUARIOS</a>
+				</div>
+				<div class="full-box tile-icon text-center">
+					<i><a class="glyphicon glyphicon-user" href="extencion/administradores.php"></a></i>
+				</div>
+				<div class="full-box tile-number text-titles">
+					<p class="full-box"><a href="extencion/administradores.php">0</a></p>
+					<small><a href="extencion/lista_publicaciones.php">Registrados</a></small>
 				</div>
 			</article>
 			<article class="full-box tile">
 				<div class="full-box tile-title text-center text-titles text-uppercase">
-					Usuarios
+					<a href="../usuario/usuario.php">PUBLICACIONES</a>
 				</div>
 				<div class="full-box tile-icon text-center">
-					<i class="glyphicon glyphicon-user"></i>
+					<i><a class="glyphicon glyphicon-pencil" href="extencion/administradores.php"></a></i>
 				</div>
 				<div class="full-box tile-number text-titles">
-					<p class="full-box">0</p>
-					<small>Registrados</small>
-				</div>
-			</article>
-			<article class="full-box tile">
-				<div class="full-box tile-title text-center text-titles text-uppercase">
-					Publicaciones
-				</div>
-				<div class="full-box tile-icon text-center">
-					<i class="glyphicon glyphicon-pencil"></i>
-				</div>
-				<div class="full-box tile-number text-titles">
-					<p class="full-box">0</p>
-					<small>Registrados</small>
+					<p class="full-box"><a href="extencion/administradores.php">0</a></p>
+					<small><a href="extencion/administradores.php">Registrados</a></small>
 				</div>
 			</article>
 		</div>

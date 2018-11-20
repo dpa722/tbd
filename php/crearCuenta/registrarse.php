@@ -16,15 +16,11 @@
 		<form class="formulario" action="../conexion/operacionGuardar.php" method="POST">
 			<h1>Felicidades !!</h1>
 			<h1>Nuevo Usuario</h1>
-			<input type="text" name="email" class="Email" placeholder="Correo Electronico" required="">
-			<input type="password" name="contra" class="Address" placeholder="Contraseña" required="">
-			<input type="text" name="ci" class="CI" placeholder="Carnet de Identidad" required="">
-			<input type="text" name="nombre" class="Name" placeholder="Nombre" required="">
-			<input type="text" name="ap" class="Paterno" placeholder="Apellido Paterno" required="">
-			<input type="text" name="am" class="Materno" placeholder="Apellido Materno" required="">
-			<input type="text" name="pais" class="Country" placeholder="Pais" required="">
-			<input type="text" name="dpto" class="Address" placeholder="Departamento" required="">
-			<button type="submit" value="Add" name="submit">Registrarse</button>
+			<input type="text" REQUIRED name="email" class="Email" placeholder="Correo Electronico">
+			<input type="password" REQUIRED name="contra" class="Address" placeholder="Contraseña">
+			<input type="text" REQUIRED name="nombre" class="Name" placeholder="Nombre Usuario">
+			<input type="checkbox" value=""> Acepto los terminos y condiciones
+			<button type="submit" value="Add" name="submit" >Registrarse</button>
 		</form>
 	</div>
 </body>
